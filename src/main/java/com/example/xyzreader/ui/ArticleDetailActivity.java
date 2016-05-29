@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.xyzreader.R;
@@ -73,6 +74,13 @@ public class ArticleDetailActivity extends AppCompatActivity implements LoaderMa
     public void setActionBar(Toolbar toolbar) {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     @Override
